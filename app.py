@@ -7,7 +7,6 @@ from pathlib import Path
 from wtforms.validators import InputRequired
 from script import process_pdf
 import fitz
-import runpy
 
 app = Flask(__name__, static_folder='staticStyle')
 app.config.from_object('config.Config')
