@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/staticStyle/favicon.ico"/>
+    <title>Pdf editor</title>
+</head>
+<link rel="stylesheet" href="/staticStyle/main.css" />
+<body>
+    <div id='content'>
+        <h1>please upload a pdf file</h1>
+        <p>returns your pdf with table of contents, bibliography, credits, index, etc removed</p>
+    </div>
+    
+    <div id='newfile'>
+        <form method='POST' enctype='multipart/form-data'>
+            {{form.hidden_tag()}}
+            {{form.file()}}
+            {{form.submit()}}
+        </form>
+            {{invalid}}
+            <div id='icon'>
+                <img src="{{url_for('static', filename='icon.png')}}" alt='ic'></img>
+                    </div>
+            <div id="onhovertip">This program removes 'frontmatter' i.e. pages from the table of contents with
+                headers such as, 'half title','title','title page','about the author','copyright','contents','author','introduction',
+                'references','glossary','index','notes','key terms','conclusions','appendix','appendix:','foreword','biography',
+                'dedication','disclaimers','preface','safety notices','number of printings'
+                'acknowledgments','afterword','postscript','prologue','bibliography'. 
+            </div>
+    </div>
+    <div id="tips">
+        <p>
+          Authored by
+          <a href="https://github.com/DaveP80" class="text-blue-600 hover:text-blue-700 transition duration-150 ease-in-out"
+            data-bs-toggle="tooltip" title="davep80">{...}</a>
+        </p>
+      </div>
+      <!-- Required popper.js -->
+      <script src="https://unpkg.com/@popperjs/core@2.9.1/dist/umd/popper.min.js" charset="utf-8"></script>
+      <script type="text/javascript">
+        var tooltipTriggerList = [].slice.call(
+          document.querySelectorAll('[data-bs-toggle="tooltip"]')
+        );
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+          return new Tooltip(tooltipTriggerEl);
+        });
+      </script>
+    
+        
+</body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+    <link rel="stylesheet" href="/staticStyle/main.css" />
+<head>
+    <title>new pdf</title>
+    <link rel="icon" href="/staticStyle/favicon.ico"/>
+</head>
+<body>
+<div id='results'>
+    <h1>new formatted pdf!</h1>
+    {% for filename in files %}
+
+<embed src="{{ url_for('download_file', filename=filename) }}" width= "500" height= "375">
+    <div id='secondary'>
+        <a href="{{ url_for('download_file', filename=filename) }}">{{ filename }}</a><br />
+    </div>
+{% endfor %}
+</div>
+<div id='nav'>
+    <button onclick="goBack()">New File</button>
+</div>
+<script>
+function goBack() {
+  window.history.back();
+}
+</script>
+</body>
+
+</html>

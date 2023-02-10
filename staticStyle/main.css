@@ -1,0 +1,75 @@
+body {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+      height: 100vh;
+  }
+  @keyframes gradient {
+      0% {
+          background-position: 0% 50%;
+      }
+      50% {
+          background-position: 100% 50%;
+      }
+      100% {
+          background-position: 0% 50%;
+      }
+  }
+
+  div#tips {
+    max-width: 500px;
+    margin: auto;
+    background: rgb(95, 114, 148);
+    padding: 10px;
+  }
+  
+  div#secondary {
+    max-width: 500px;
+    margin: auto;
+    background: rgb(114, 165, 140);
+    padding: 10px;
+    font-family: "Lucida Console", monospace;
+  }
+  div#content {
+    max-width: 500px;
+    margin: auto;
+    background: rgb(114, 165, 140);
+    padding: 10px;
+    font-family: "Lucida Console", monospace;
+  }
+  div#results {
+    max-width: 600px;
+    margin: auto;
+    background: rgb(218, 238, 228);
+    padding: 10px;
+  }
+
+  div#newfile {
+    max-width: 500px;
+    margin: auto;
+    background: rgb(106, 138, 123);
+    padding: 10px;
+  }
+  
+  div#nav {
+    max-width: 600px;
+    margin: auto;
+    background: rgb(110, 98, 75);
+    padding: 10px;
+  }
+
+  div#icon {
+    margin: auto;
+    padding: 10px;
+  }
+
+  div#onhovertip {
+    display: none;
+    position: relative;
+    max-width: 200px;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  div#icon:hover + div#onhovertip {
+    display: block;
+  }
