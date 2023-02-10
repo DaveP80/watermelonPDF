@@ -6,5 +6,5 @@ load_dotenv(path.join(basedir, '.env'))
 
 class Config:
     SECRET_KEY = environ.get('SECRET_KEY')
-    UPLOAD_FOLDER = 'static/files'
+    UPLOAD_FOLDER = 'static'
     TEMPLATES_FOLDER = 'templates'

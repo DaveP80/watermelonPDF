@@ -28,7 +28,7 @@ def home():
                 except OSError as e:
                     print('Error: %s : %s' % (f, e.strerror))
         def clearfDir():
-            for f in Path('./static/files').glob('*.*'):
+            for f in Path('./static').glob('*.*'):
                 try:
                     f.unlink()
                 except OSError as e:
