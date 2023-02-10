@@ -45,8 +45,12 @@ def home():
         if count<20:
             clearfDir()
             return render_template('index.html', form=form, invalid='upload pdf with more than 20 pages!')
-        process_pdf(loc)
-        return redirect(url_for('download'))
+        res = process_pdf(loc)
+        if res=='encrypted':
+            clearfDir()
+            return render_template('index.html', form=form, invalid='invalid pdf coding')
+        if not res:
+            return redirect(url_for('download'))
     return render_template('index.html', form=form)
 
 @app.route('/download')

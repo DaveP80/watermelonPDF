@@ -2,7 +2,7 @@ FROM python:3.9
 
 RUN pip install Flask gunicorn PyMuPDF PyPDF2 flask_wtf wtforms python-dotenv
 
-COPY src/ ./app/
+COPY src/ app/
 
 WORKDIR /app
 
