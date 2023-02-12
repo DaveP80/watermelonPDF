@@ -6,7 +6,8 @@
 pip3 install -r requirements.txt
 ```
 ```
-touch server/src/.env
+mkdir server/src/output
+mkdir server/src/static
 ```
 declare your `SECRET_KEY`
 
